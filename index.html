@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <div class="container w-50 mt-5">
+      <div class="form-group pt-4 d-flex">
+        <input type="number" placeholder="Nhập số n" id="nhapSo" />
+        <button class="btn btn-primary ml-3" id="btnThemSo">Thêm số</button>
+      </div>
+      <div class="alert alert-success p-4" id="ketQua"></div>
+      <div class="form-group">
+        <!-- //BÀI 1 -->
+        <article class="question">
+          <div class="question-title form-control">
+            <i class="fa-solid fa-1 number"></i>
+            <p class="mb-2 ml-4">Tổng số dương</p>
+            <i class="fa-solid fa-angle-down"></i>
+          </div>
+          <div class="question-text form-control">
+            <button class="btn btn-primary mt-3 py-2" id="btnTinhTong">
+              Tính tổng
+            </button>
+            <div class="alert alert-success p-4 mt-3" id="ketQua1"></div>
+          </div>
+        </article>
+        <!-- BÀI 2 -->
+        <article class="question">
+          <div class="question-title form-control">
+            <i class="fa-solid fa-2 number"></i>
+            <p class="mb-2 ml-4">Đếm số dương</p>
+            <i class="fa-solid fa-angle-down"></i>
+          </div>
+          <div class="question-text form-control">
+            <button class="btn btn-primary mt-3 py-2" id="btnDemSoDuong">
+              Đếm số
+            </button>
+            <div class="alert alert-success p-4 mt-3" id="ketQua2"></div>
+          </div>
+        </article>
+        <!-- BÀI 3 -->
+        <article class="question">
+          <div class="question-title form-control">
+            <i class="fa-solid fa-3 number"></i>
+            <p class="mb-2 ml-4">Tìm số nhỏ nhất</p>
+            <i class="fa-solid fa-angle-down"></i>
+          </div>
+          <div class="question-text form-control">
+            <button class="btn btn-primary mt-3 py-2" id="btnSoNhoNhat">
+              Tìm số nhỏ nhất
+            </button>
+            <div class="alert alert-success p-4 mt-3" id="ketQua3"></div>
+          </div>
+        </article>
+        <!-- BÀI 4 -->
+        <article class="question">
+          <div class="question-title form-control">
+            <i class="fa-solid fa-4 number"></i>
+            <p class="mb-2 ml-4">Tìm số dương nhỏ nhất</p>
+            <i class="fa-solid fa-angle-down"></i>
+          </div>
+          <div class="question-text form-control">
+            <button class="btn btn-primary mt-3 py-2" id="btnSoDuongNhoNhat">
+              Tìm số dương nhỏ nhất
+            </button>
+            <div class="alert alert-success p-4 mt-3" id="ketQua4"></div>
+          </div>
+        </article>
+        <!-- BÀI 5 -->
+        <article class="question">
+          <div class="question-title form-control">
+            <i class="fa-solid fa-5 number"></i>
+            <p class="mb-2 ml-4">Tìm số chẵn cuối cùng</p>
+            <i class="fa-solid fa-angle-down"></i>
+          </div>
+          <div class="question-text form-control">
+            <button class="btn btn-primary mt-3 py-2" id="btnTimSoChanCuoiCung">
+              Tìm số chẵn
+            </button>
+            <div class="alert alert-success p-4 mt-3" id="ketQua5"></div>
+          </div>
+        </article>
+        <!-- BÀI 6 -->
+        <article class="question">
+          <div class="question-title form-control">
+            <i class="fa-solid fa-6 number"></i>
+            <p class="mb-2 ml-4">Đổi chỗ</p>
+            <i class="fa-solid fa-angle-down"></i>
+          </div>
+          <div class="question-text form-control">
+            <div class="row">
+              <input
+                id="nhapSo1_6"
+                class="col-5 mx-3"
+                type="number"
+                placeholder="Nhập số vị trí 1"
+              />
+              <input
+                id="nhapSo2_6"
+                class="col-5 ml-5"
+                type="number"
+                placeholder="Nhập số vị trí 2"
+              />
+            </div>
+            <button class="btn btn-primary mt-3 py-2" id="btnDoiCho">
+              Đổi chỗ
+            </button>
+            <div class="alert alert-success p-4 mt-3" id="ketQua6"></div>
+          </div>
+        </article>
+        <!-- BÀI 7 -->
+        <article class="question">
+          <div class="question-title form-control">
+            <i class="fa-solid fa-7 number"></i>
+            <p class="mb-2 ml-4">Sắp xếp tăng dần</p>
+            <i class="fa-solid fa-angle-down"></i>
+          </div>
+          <div class="question-text form-control">
+            <button class="btn btn-primary mt-3 py-2" id="btnSapXepTangDan">
+              Sắp xếp
+            </button>
+            <div class="alert alert-success p-4 mt-3" id="ketQua7"></div>
+          </div>
+        </article>
+        <!-- BÀI 8 -->
+        <article class="question">
+          <div class="question-title form-control">
+            <i class="fa-solid fa-8 number"></i>
+            <p class="mb-2 ml-4">Tìm số nguyên tố đầu tiên</p>
+            <i class="fa-solid fa-angle-down"></i>
+          </div>
+          <div class="question-text form-control">
+            <button class="btn btn-primary mt-3 py-2" id="btnTimSoNguyenTo">
+              Tìm số nguyên tố
+            </button>
+            <div class="alert alert-success p-4 mt-3" id="ketQua8"></div>
+          </div>
+        </article>
+        <!-- BÀI 9 -->
+        <article class="question">
+          <div class="question-title form-control">
+            <i class="fa-solid fa-9 number"></i>
+            <p class="mb-2 ml-4">Đếm số nguyên</p>
+            <i class="fa-solid fa-angle-down"></i>
+          </div>
+          <div class="question-text form-control">
+            <input type="number" placeholder="Nhập số" id="nhapSo_9" />
+            <button class="btn btn-primary py-1" id="btnThemSo_9">
+              Thêm số
+            </button>
+            <div class="alert alert-success p-4 mt-3" id="themSo_9"></div>
+            <button class="btn btn-primary mt-3 py-2" id="btnDemSoNguyen">
+              Đếm số nguyên
+            </button>
+            <div class="alert alert-success p-4 mt-3" id="ketQua9"></div>
+          </div>
+        </article>
+        <!-- BÀI 10 -->
+        <article class="question">
+          <div class="question-title form-control">
+            <i class="fa-solid fa-1 number"></i>
+            <i class="fa-solid fa-0 number"></i>
+            <p class="mb-2 ml-4">So sánh số lượng số âm và dương</p>
+            <i class="fa-solid fa-angle-down"></i>
+          </div>
+          <div class="question-text form-control">
+            <button class="btn btn-primary mt-3 py-2" id="btnSoSanh">
+              So sánh
+            </button>
+            <div class="alert alert-success p-4 mt-3" id="ketQua10"></div>
+          </div>
+        </article>
+      </div>
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./main.js"></script>
+  </body>
+</html>
