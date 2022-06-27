@@ -58,6 +58,7 @@ article .question-title {
   position: absolute;
   top: 11px;
   right: 18px;
+  transition: all 0.5s;
 }
 
 .question-text {
@@ -69,4 +70,13 @@ article .question-title {
 .show-text .question-text {
   display: block;
   height: auto;
+}
+
+.question.show-text .question-title {
+  color: #9979e4;
+  background-color: #e7f1ff;
+}
+
+.question.show-text .question-title .fa-angle-down {
+  transform: rotate(-180deg);
 }

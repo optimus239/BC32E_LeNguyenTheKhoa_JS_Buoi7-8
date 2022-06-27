@@ -17,6 +17,7 @@ function showText(element) {
   element.classList.toggle("show-text");
 }
 
+//------------Tạo mảng-------------
 var arrNumber = [];
 document.getElementById("btnThemSo").onclick = function () {
   var number = Number(document.getElementById("nhapSo").value);
@@ -27,7 +28,6 @@ document.getElementById("btnThemSo").onclick = function () {
 };
 
 //------------Bài 1-------------
-
 document.getElementById("btnTinhTong").onclick = function () {
   tinhTongSoDuong();
 };
@@ -52,7 +52,7 @@ function demSoDuong() {
   var demSoDuong = 0;
   for (var i = 0; i < arrNumber.length; i++) {
     var iSo = arrNumber[i];
-    if (iSo >= 0) {
+    if (iSo > 0) {
       demSoDuong += 1;
     }
     document.getElementById("ketQua2").innerHTML = "Số dương: " + demSoDuong;
@@ -94,9 +94,10 @@ function soDuongNhoNhat() {
     var soDuong = arrSoDuong[i];
     if (soDuong <= soDuongNhoNhat) {
       soDuongNhoNhat = soDuong;
-      document.getElementById("ketQua4").innerHTML = soDuongNhoNhat;
     }
   }
+  document.getElementById("ketQua4").innerHTML =
+    "Số dương nhỏ nhất: " + soDuongNhoNhat;
 }
 
 //------------Bài 5-------------
@@ -106,13 +107,16 @@ document.getElementById("btnTimSoChanCuoiCung").onclick = function () {
 
 function soChanCuoiCung() {
   var arrSoChan = [];
-  for (var i = 0; i < arrNumber.length; i++) {
+  for (var i = arrNumber.length - 1; i >= 0; i--) {
     if (arrNumber[i] % 2 === 0) {
       arrSoChan.push(arrNumber[i]);
+      var ketQua = "Số chẵn cuối cùng: " + arrSoChan;
+      break;
+    } else {
+      ketQua = "Không có số chẵn: " + -1;
     }
   }
-  document.getElementById("ketQua5").innerHTML =
-    "Số chẵn cuối cùng: " + arrSoChan[arrSoChan.length - 1];
+  document.getElementById("ketQua5").innerHTML = ketQua;
 }
 
 //------------Bài 6-------------
@@ -155,18 +159,21 @@ document.getElementById("btnTimSoNguyenTo").onclick = function () {
 };
 
 function timSoNguyenToDT() {
+  var ketQua = "";
   for (var i = 0; i < arrNumber.length; i++) {
     if (arrNumber[i] > 2) {
       var kiemTra = kiemTraSoNguyenTo(arrNumber[i]);
       if (kiemTra === true) {
         var soNguyenTo = arrNumber[i];
+        ketQua = "Số nguyên tố đầu tiên: " + soNguyenTo;
         break;
+      } else {
+        ketQua = "Không có số nguyên tố: " + -1;
       }
     }
   }
 
-  document.getElementById("ketQua8").innerHTML =
-    "Số nguyên tố đầu tiên: " + soNguyenTo;
+  document.getElementById("ketQua8").innerHTML = ketQua;
 }
 
 function kiemTraSoNguyenTo(so) {
@@ -199,7 +206,7 @@ function kiemTraSoNguyen() {
       soNguyen += 1;
     }
   }
-  document.getElementById("ketQua9").innerHTML = soNguyen;
+  document.getElementById("ketQua9").innerHTML = "Số nguyên: " + soNguyen;
 }
 
 //------------Bài 10-------------
