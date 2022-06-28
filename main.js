@@ -1,5 +1,4 @@
 const question = document.querySelectorAll(".question");
-
 for (var i = 0; i < question.length; i++) {
   const element = question[i];
   const title = question[i].querySelector(".question-title");
